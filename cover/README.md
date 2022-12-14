@@ -1,6 +1,6 @@
 ### MathSTIC - École doctorale MathSTIC
 
-Spécialités & unités de recherche: https://ed-mathstic.doctorat-bretagneloire.fr/fr/8_presentation
+Spécialités & unités de recherche: https://ed-mathstic.doctorat-bretagne.fr/fr/presentation
 
 ```
 \ecoledoctorale{MathSTIC}

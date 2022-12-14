@@ -2,7 +2,7 @@
 
 > This repository is a clone of the inria gitlab repo: https://gitlab.inria.fr/ed-mathstic/latex-template
 
-This repository contains a template for the thesis manuscript supporting all doctoral schools of the [MathTIC](https://www.doctorat-bretagneloire.fr/).
+This repository contains a template for the thesis manuscript supporting all doctoral schools of [Collège Doctoral de Bretagne](https://www.doctorat-bretagne.fr/).
 
 The main goal of this template is to provide both front and back covers of the thesis manuscript entirely written in latex. These covers have been (manually) reproduced from the original M$ Word model provided by doctoral school MathSTIC in 2018, then generalized to all doctoral schools. While the manuscript covers must follow the rules of DBL, the internal layout of the content is more flexible. The content layout provided in this template is therefore given as an exemple rather than as a  mandatory framework.
 
@@ -80,7 +80,7 @@ Currently the latex default font is the one used for the content.
 
 -----
 
-# ![(git logo)](https://yousername.gitlab.io/img/logo_git_50x50.png) Contribute
+# Contribute
 
 To propose changes, (1) you first have to request access to this repository (top page link, [HOWTO](https://docs.gitlab.com/ee/user/project/members/#project-membership-and-requesting-access)), (2) push your branch to this repository once access is granted, and finally (3) create a pull request with your proposed changes. Or just create an issue.
 

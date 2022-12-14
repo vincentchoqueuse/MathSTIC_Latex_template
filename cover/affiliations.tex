@@ -1,0 +1,63 @@
+
+%%% Switch case in latex
+%%% https://tex.stackexchange.com/a/343306
+\makeatletter
+\newcommand\addcase[3]{\expandafter\def\csname\string#1@case@#2\endcsname{#3}}
+\newcommand\makeswitch[2][]{%
+  \newcommand#2[1]{%
+    \ifcsname\string#2@case@##1\endcsname\csname\string#2@case@##1\endcsname\else#1\fi%
+  }%
+}
+\makeatother
+
+%%%% Il faut adapter la taille des logos dans certains cas (e.g., EGAAL, 2 etablissements)
+\newcommand\hauteurlogos[3]{
+    \hauteurlogoecole{#1}
+    \hauteurlogoetablissementA{#2}
+    \hauteurlogoetablissementB{#3}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% ECOLES DOCTORALES %%%%%%%%%%%%%%%%
+
+%%%% #1: dossier des images, #2: numero ED, #3: couleur ED, #4-#5: nom complet sur plusieurs lignes
+\newcommand\addecoledoctorale[5]{\direcole{#1}\numeroecole{#2}\definecolor{color-ecole}{RGB}{#3}\nomecoleA{#4}\nomecoleB{#5}}
+
+\makeswitch[default]\ecoledoctorale{}
+
+\addcase\ecoledoctorale{MathSTIC}{\addecoledoctorale
+    {MathSTIC}
+    {644}
+    {236,115,127} %{236,115,127}
+    {Math\'{e}matiques et Sciences et Technologies}
+    {de l'Information et de la Communication en Bretagne Océane}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% ETABLISSEMENTS %%%%%%%%%%%%%%%%
+
+%%%% #1 nom du logo, #2-#4: nom complet sur plusieurs lignes
+\newcommand\addetablissement[4]{\logoetablissementB{#1}\nometablissementC{#2}\nometablissementD{#3}\nometablissementE{#4}}
+
+\makeswitch[default]\etablissement{}
+
+\addcase\etablissement{ENIB}{\addetablissement
+    {ENIB}
+    {}
+    {L'\'{E}COLE NATIONALE}
+    {D'ING\'{E}NIEURS DE BREST}
+}
+
+\addcase\etablissement{UBO}{\addetablissement
+    {UBO}
+    {}
+    {}
+    {L'UNIVERSIT\'{E} DE BRETAGNE OCCIDENTALE}
+}
+\addcase\etablissement{UBS}{\addetablissement
+    {UBS}
+    {}
+    {}
+    {L'UNIVERSIT\'{E} DE BRETAGNE SUD}
+}
+

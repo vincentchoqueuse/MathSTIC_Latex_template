@@ -27,7 +27,7 @@ $(TARGET).pdf: $(SOURCE_FILES) $(BIB_FILES) $(FIGURES) these-dbl.cls
 	pdflatex -interaction=nonstopmode -jobname=$(TARGET) $(SOURCE_FILES) # For biber
 
 clean:
-	rm -f $(TARGET).{ps,bcf,run.xml}
+	rm -f $(TARGET).{ps,pdf,bcf,run.xml}
 	for suffix in dvi aux bbl blg toc ind out brf ilg idx synctex.gz log; do \
 		find . -type d -name ".git" -prune -o -type f -name "*.$${suffix}" -print -exec rm {} \;  ; \
 	done
